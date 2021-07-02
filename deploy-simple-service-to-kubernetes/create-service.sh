@@ -11,3 +11,5 @@ spec:
     port: 80
     targetPort: 80
 EOF
+
+#kubectl exec busybox -- curl -s store-products
