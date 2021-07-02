@@ -1,0 +1,1 @@
+az aks delete --name Cluster01  --resource-group aks-sandbox-canada

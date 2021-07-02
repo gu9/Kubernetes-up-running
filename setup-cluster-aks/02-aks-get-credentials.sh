@@ -1,0 +1,1 @@
+az aks get-credentials --name Cluster01 --resource-group aks-sandbox-canada
