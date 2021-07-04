@@ -20,7 +20,7 @@ spec:
       containers:
       - name: aks-web-app-container
         # Docker Hub image to use
-        image: nginx
+        image: nginx:1.17.23
         # Define ports to expose
         ports:
         - containerPort: 80
