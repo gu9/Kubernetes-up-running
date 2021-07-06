@@ -107,3 +107,13 @@ kubectl run nginx-sa --image=nginx --serviceaccount="kpsingsa"
 kubectl get nodes
 
 kubectl label node node-1 disk=hdd
+
+kubectl taint nodes node-1 key=value:NoSchedule
+#replace the IP and Token in the below command based on your environment
+
+curl -k https://IP-HERE:/api/v1/ --header "Authorization: Bearer $TOKEN"
+
+kubectl config get-contexts
+kubectl config get-contexts
+kubectl config current-context
+kubectl config use-context gcpcluster-k8s-1
