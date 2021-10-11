@@ -1,0 +1,56 @@
+Solution
+Log in to the server using the credentials provided:
+
+ssh cloud_user@<PUBLIC_IP_ADDRESS>
+Install java-1.8.0-openjdk-devel and EPL repo
+Install Java:
+
+sudo yum install -y epel-release java-1.8.0-openjdk-devel
+Install the Repo and Key, and Then Install Jenkins
+Install wget:
+
+sudo yum install -y wget
+Download the repo:
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+Import the required key:
+
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+Install Jenkins:
+
+sudo yum install -y jenkins
+Enable Jenkins:
+
+sudo systemctl enable jenkins
+Start Jenkins:
+
+sudo systemctl start jenkins
+In a new browser tab, navigate to http://<PUBLIC_IP_ADDRESS>:8080, replacing <PUBLIC_IP_ADDRESS> with the IP address of the cloud server provided on the lab page.
+
+We'll be taken to an Unlock Jenkins page telling us we need to locate the password. In the terminal, run:
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Copy the result of the command, as this is the password we need.
+
+Paste the password into the Administrator password field on the Jenkins browser page.
+
+Click Continue.
+
+Click Install suggested plugins. Note: If the install of any plugins fails, just wait a moment and click retry.
+
+On the new user creation page, set the following values:
+
+Username: student
+Password: OmgPassword!
+Full name: student
+E-mail address: student\@acloudguru.com
+Click Save and Continue.
+
+Click Save and Finish.
+
+Click Start using Jenkins.
+
+Click Manage Jenkins in the left-hand menu, and then look around a bit to get familiar with the items in that area.
+
+Conclusion
+Congratulations on successfully completing this hands-on lab!
